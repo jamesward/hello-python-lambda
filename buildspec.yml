@@ -4,10 +4,9 @@ phases:
   install:
     commands:
       - pip install -r requirements.txt -t .
-  build:
-    commands:
-      - zip -r function.zip .
 
 artifacts:
   files:
-    - function.zip
+    - '**/*'
+  exclude-patterns:
+    - '.git'
